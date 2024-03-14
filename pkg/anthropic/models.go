@@ -11,6 +11,8 @@ const (
 	// Ideal balance of intelligence and speed for enterprise workloads
 	Claude3Sonnet Model = "claude-3-sonnet-20240229"
 
+	Claude3Haiku Model = "claude-3-haiku-20240307"
+
 	// Fastest and most compact model for near-instant responsiveness
 	// Claude 3 Haiku: Coming soon. Not yet available as of Mar 4 2024.
 
@@ -63,7 +65,7 @@ const (
 
 func (m Model) IsMessageCompatible() bool {
 	switch m {
-	case Claude3Opus, Claude3Sonnet, ClaudeV2_1:
+	case Claude3Opus, Claude3Sonnet, Claude3Haiku, ClaudeV2_1:
 		return true
 	}
 	return false
